@@ -44,7 +44,7 @@ string dekripsi(string cipher_text, int key){
 
 int main(){
 	string plain_text;
-  int key;
+	int key;
 
 	cout << "Masukkan plain text: ";
 	cin >> plain_text;
