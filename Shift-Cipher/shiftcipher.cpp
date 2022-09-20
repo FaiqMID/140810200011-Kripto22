@@ -12,11 +12,11 @@ using namespace std;
 string enkripsi(string plain_text, int key){
 	string cipher_text = "";	
 	for(int i = 0; i < plain_text.size(); i++){
-		if(plain_text[i] != ' '){
-			if(isupper(plain_text[i])){
-				cipher_text += char(int(plain_text[i] + key - 65) % 26 + 65); //65 = A-Z
+		if (plain_text[i] != ' '){
+			if (isupper(plain_text[i])){
+				cipher_text += char(int(plain_text[i] + key - 65) % 26 + 65);
 			} else {
-				cipher_text += char(int(plain_text[i] + key - 97) % 26 + 97); //97 = a-z
+				cipher_text += char(int(plain_text[i] + key - 97) % 26 + 97);
 			}
 		} else {
 			cipher_text += plain_text[i];
@@ -27,15 +27,15 @@ string enkripsi(string plain_text, int key){
 }
 
 string dekripsi(string cipher_text, int key){
-	string plain_text="";	
+	string plain_text = "";	
 	for(int i = 0; i < cipher_text.size(); i++){
-		if(cipher_text[i] != ' '){
-			if(isupper(cipher_text[i])){
+		if (cipher_text[i] != ' '){
+			if (isupper(cipher_text[i])){
 				plain_text += char((int(cipher_text[i] - key - 65) % 26 + 26) % 26 + 65);
 			} else {
 				plain_text+=  char((int(cipher_text[i] - key - 97) % 26 + 26) % 26 + 97);
 			}
-		} else{
+		} else {
 			plain_text += cipher_text[i];
 		}
 	}
