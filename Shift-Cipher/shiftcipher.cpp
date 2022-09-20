@@ -18,7 +18,7 @@ string enkripsi(string plain_text, int key){
 			} else {
 				cipher_text += char(int(plain_text[i] + key - 97) % 26 + 97); //97 = a-z
 			}
-		} else{
+		} else {
 			cipher_text += plain_text[i];
 		}
 		
