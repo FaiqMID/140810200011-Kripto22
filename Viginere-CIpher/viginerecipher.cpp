@@ -67,4 +67,5 @@ int main() {
   
   string plaintext = cipher.dekripsi(ciphertext);
   cout << "Dekripsi: " << plaintext << endl;
+  
 }
